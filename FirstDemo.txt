@@ -1,0 +1,62 @@
+db.createUser(
+	{
+        user: "Boen", 
+        pwd: "myPassword", 
+        roles: [ { role: "readWrite", db: "dbAdmin" } ]
+	})
+
+{
+	first_name: "Boen",
+	last_name: "Du",
+	memberships:["mem1","mem2"]
+	classtaken:{
+         class1: "General Psychology"  Grade:4
+	 class2: "Economics Statistics" Grade:3.7
+        }
+}
+
+
+db.students.aggregate(
+...    [
+...      {
+...         $group:
+...          {
+...            _id : "$ClassTaken",
+...            avgGPA: {$avg: "$Grade"}
+...          }
+...      }
+...    ]
+... )
+
+db.students.aggregate(
+...    [
+...      {
+...         $group:
+...          {
+...            _id : {"class": "$ClassTaken", "prof":"$Prof"},
+...            Count: {$sum:1},
+...	       avgGPA: {$avg: "$Grade"}
+...          }
+...      }
+...    ]
+... )
+
+db.students.aggregate(
+...    [
+...      {
+...         $group:
+...          {
+...            _id : null,
+...            avgGPA: {$avg: "$Grade"}
+...          }
+...      }
+...    ]
+... )
+
+{user_id:"Anonymous3",Permission:"Vistor",ClassTaken:"Econ1500",Grade:"3.70",FinalCurve:"Yes"})
+WriteResult({ "nInserted" : 1 }
+
+db.students.update({user_id:"Anonymous3"},{$set:{Grade:3.70}})
+
+db.students.insert({Econ1500GPA:})
+
