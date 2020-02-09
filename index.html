@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>GPA Confidential</h1>
+
+        <div class="content">
+            <p>Submission List</p>
+            <form id="add-Submission-form">
+                <input type = "text" name = "class" placeholder = "Your Class" >
+            </form>
+                
+            <ul id="Submisson-list"></ul>
+
+        </div>
+            
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBId4rFx7m3byKlSoDUsf9wj2jHlqGANVE",
+            authDomain: "gpaconfidential.firebaseapp.com",
+            databaseURL: "https://gpaconfidential.firebaseio.com",
+            projectId: "gpaconfidential",
+            storageBucket: "gpaconfidential.appspot.com",
+            messagingSenderId: "818887911702",
+            appId: "1:818887911702:web:6dcc25dcf0e4e225384837",
+            measurementId: "G-QDBGYHK826"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+</script>
+
+        <script src="app.js"></script>
+    </body>
+</html>
