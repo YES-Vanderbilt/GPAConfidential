@@ -1,5 +1,5 @@
 body{
-    background: #0c5a26;
+    background: #010d14;
     font-family: ubuntu;
 }
 
@@ -13,8 +13,8 @@ h1{
 
 .content{
     background: #fff;
-    max-width: 1280px;
-    margin: 30px auto;
+    max-width: 1880px;
+    margin: 50px auto;
     padding:  20px 30px;
     border-radius: 10px 120px 10px 10px;
     box-shadow: 1px 3px 5px rgba(0,0,0,0.1)
