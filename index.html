@@ -13,8 +13,13 @@
         <div class="content">
             <p>Submission List</p>
             <form id="add-Submission-form">
-                <input type = "text" name = "class" placeholder = "Your Class" >
-            </form>
+                <input type = "text" name = "class_taken" placeholder = "Your Class" required >
+                <!--Final Grade Curved </br> <input type="checkbox" name="Final Grade Curved" value="Not Curved" unchecked>
+                Exams Curved </br> <input type="checkbox" name="Exams Curved" value="Not Curved" unchecked>  -->
+                <input type = "text" name = "professor" placeholder = "Professor" required>
+                <input type="number" name= "grade_received" placeholder="Numeric Grade Reiceved" min="0" max="4" step=".1" required>
+                <button> Add Submission</button>>
+            </form> 
                 
             <ul id="Submisson-list"></ul>
 
